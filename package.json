@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/wangpengfeido/nodeCrawlers/issues"
   },
-  "homepage": "https://github.com/wangpengfeido/nodeCrawlers#readme"
+  "homepage": "https://github.com/wangpengfeido/nodeCrawlers#readme",
+  "dependencies": {
+    "phantomjs-prebuilt": "^2.1.16"
+  }
 }
