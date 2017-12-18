@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/wangpengfeido/nodeCrawlers#readme",
   "dependencies": {
-    "phantomjs-prebuilt": "^2.1.16"
+    "pdfkit": "^0.8.3"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2"
   }
 }
