@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/wangpengfeido/nodeCrawlers#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "pdfkit": "^0.8.3"
-  },
-  "devDependencies": {
-    "cheerio": "^1.0.0-rc.2"
   }
 }
