@@ -22,6 +22,23 @@ class PdfKitHelp {
     }
 
     /**
+     * 设置默认字体
+     */
+    setDefaultFont(fontPath) {
+        this.defaultFont = fontPath
+    }
+
+    addPage() {
+        let _doc = this.doc
+        if (_doc) {
+            _doc.addPage()
+            return this
+        } else {
+            return null
+        }
+    }
+
+    /**
      * 写一张满页的图片(A4)
      * @param img {Buffer|String|URL}
      */
@@ -36,15 +53,17 @@ class PdfKitHelp {
     }
 
     /**
-     * 写满页的文字
+     * 写满页的文字(A4)
      * @param text {String}
      * @param size {Number}
      * @return {*}
      */
-    writeFullPageText(text,size){
+    writeFullPageText(text, size = 60) {
         let _doc = this.doc
         if (_doc) {
-            _doc.image(text, 0, 0, {fit: [595, 842]})
+            _doc.font(this.defaultFont)
+                .fontSize(size)//.text(text)
+                .text(text, 0, 842/3, {width: 595, align: 'center'})
             return this
         } else {
             return null
